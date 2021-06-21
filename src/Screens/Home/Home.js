@@ -38,6 +38,8 @@ const Home = ({ onSetTitles, onDeleteTitle }) => {
                 imageUrl: response[i].columns[columnId].imageUrl,
                 title: title,
                 url: response[i].columns[columnId].url,
+                width: response[i].columns[columnId].width,
+                type: response[i].columns[columnId].type,
               })
               titles.push(title)
             }
@@ -120,6 +122,8 @@ const Home = ({ onSetTitles, onDeleteTitle }) => {
                 Follow the link
               </a>
             </td>
+            <td className={styles.followWrapper}>{el.width}</td>
+            <td className={styles.followWrapper}>{el.type}</td>
             <td className={styles.deleteWrapper}>
               <button
                 className={styles.delete}
@@ -142,8 +146,10 @@ const Home = ({ onSetTitles, onDeleteTitle }) => {
     <table className={styles.table}>
       <tbody>
         <tr>
-          <th>Image</th>
+          <th className={styles.imageWrapper}>Image</th>
           <th>Title</th>
+          <th>URL</th>
+          <th>Width</th>
           <th>URL</th>
         </tr>
         <Table />
