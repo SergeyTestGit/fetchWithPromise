@@ -7,7 +7,7 @@ const TopBar = ({ isLoaded }) => {
     return (
       <header className={styles.container}>
         <Link to={root}>Home</Link>
-        <Link to={titles}>Articles</Link>
+        <Link to={titles}>Titles</Link>
       </header>
     )
   } else {
