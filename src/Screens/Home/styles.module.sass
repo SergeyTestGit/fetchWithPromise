@@ -16,14 +16,16 @@ table, td, th
 
 .table
     width: 100%
+    min-width: 1000px
     border-collapse: collapse
+    overflow-x: scroll
     .imageWrapper
         width: 150px
         img
             vertical-align: middle
     .titleWrapper
         position: relative
-        // width: 5/12 *100%
+        width: 5/12 *100%
         vertical-align: top
         word-break: break-word
         &:hover %checkMark
@@ -33,7 +35,7 @@ table, td, th
             height: 150px
             textarea
                 width: 100%
-                height: 100%
+                height: 95%
                 resize: none
         .editWrapper
             @extend %checkMark
@@ -43,7 +45,7 @@ table, td, th
 
 .deleteWrapper
     position: relative
-    width: 100px
+    min-width: 100px
     .delete
         position: absolute
         top: 50%
